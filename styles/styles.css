@@ -55,9 +55,6 @@ body {
 
 .menu .nav-bar .nav-btn-envelope .nav-btn a {
   text-decoration: none;
-  text-transform: uppercase;
-  color: var(--color-grey-1);
-  white-space: nowrap;
 }
 
 .menu .nav-bar .nav-btn-envelope .nav-btn a:hover {
@@ -66,5 +63,14 @@ body {
 
 .menu .nav-bar .nav-btn-envelope .active-btn a {
   color: var(--color-secondary) !important;
+}
+
+.image img {
+  width: 500px;
+  height: auto;
+}
+
+.random {
+  position: fixed;
 }
 /*# sourceMappingURL=styles.css.map */

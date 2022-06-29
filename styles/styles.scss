@@ -43,9 +43,9 @@ body {
             .nav-btn {
                 a{
                     text-decoration: none;
-                    text-transform: uppercase;
-                    color: var(--color-grey-1);
-                    white-space: nowrap;
+                    //text-transform: uppercase;
+                    //color: var(--color-grey-1);
+                    //white-space: nowrap;
                 }
                 a:hover{
                     color: var(--color-secondary);
@@ -56,4 +56,15 @@ body {
             }
         }
     }
+}
+
+.image{
+    img{
+        width: 500px;
+        height: auto;
+    }
+}
+
+.random{
+    position: fixed;
 }
