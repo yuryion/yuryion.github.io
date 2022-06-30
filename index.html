@@ -15,32 +15,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body>
-    <div class="random">
-        Beep Bop Boop
-    </div>
-    <div class="home-page">
-        <div class="image">
-            <img src="img/me.png" alt="">
-        </div>
-    </div>
+<body class="body">
+    
     <nav class="menu">
         <div class="nav-bar">
 
             <div class="nav-btn-envelope">
-                <div class="nav-btn nav-btn-home active-btn"><a href="#">Home</a></div>
+                <div class="nav-btn nav-btn-home active-btn" data-id="home"><a href="#">Home</a></div>
             </div>
 
             <div class="nav-btn-envelope">
-                <div class="nav-btn nav-btn-about"><a href="#">About me</a></div>
+                <div class="nav-btn nav-btn-about" data-id="about"><a href="#">About me</a></div>
             </div>
 
             <div class="nav-btn-envelope">
-                <div class="nav-btn nav-btn-portfolio"><a href="#">Portfolio</a></div>
+                <div class="nav-btn nav-btn-portfolio" data-id="portfolio"><a href="#">Portfolio</a></div>
             </div>
 
         </div>
     </nav>
+    
+    <section class="section section-1 home active-section">
+        <div class="home-content">
+            <div class="right-home">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <img src="img/me.png" alt="">
+                </div>
+            </div>
+            <div class="left-home">
+                <h1 class="name">
+                    Hi, I'm <span> Jim </span>
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                </p>
+                <!--
+                <div class="btn-con">
+                    <a href="#" class="main-btn">
+                        <span class="btn-text">Download CV</span>
+                        <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                    </a>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-2 about"></section>
+
+    <section class="section section-3 portfolio"></section>
 
     <script src="app.js"></script>
 </body>

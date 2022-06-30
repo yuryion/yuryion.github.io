@@ -35,36 +35,42 @@ body {
     transform: translateX(-50%);
     z-index: 10;
     padding-top: 1rem;
-    .nav-bar{
+    background-color: var(--color-primary);
+    width: 100%;
+    .nav-bar {
         display: flex;
         flex-direction: row;
-        .nav-btn-envelope{ 
+        justify-content: center;
+        .nav-btn-envelope { 
             padding: 0 2rem;   
             .nav-btn {
-                a{
+                a {
                     text-decoration: none;
-                    //text-transform: uppercase;
-                    //color: var(--color-grey-1);
-                    //white-space: nowrap;
+                    text-transform: uppercase;
+                    color: var(--color-grey-1);
+                    white-space: nowrap;
                 }
-                a:hover{
+                a:hover {
                     color: var(--color-secondary);
                 }
             }
-            .active-btn a{
+            .active-btn a {
                 color: var(--color-secondary) !important;
             }
         }
     }
 }
 
-.image{
-    img{
-        width: 500px;
-        height: auto;
+.image {
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: auto;
+        height: 500px;
     }
 }
 
-.random{
+.random {
     position: fixed;
 }

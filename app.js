@@ -1,10 +1,10 @@
-const sections = document.querySelectorAll('.section');
+const sections = document.querySelectorAll('.section'); //select all section
 const navBar = document.querySelectorAll('.nav-bar'); //buttons parent
 const navBtn = document.querySelectorAll('.nav-btn'); //the actual buttons
-const allSections = document.querySelector('.main-content'); //selects the body
+const body = document.querySelector('.body'); //select the body
 
 function PageTransitions(){
-    //Button click active class
+    //Selected button stays selected
     for(let i = 0; i < navBtn.length; i++){
         navBtn[i].addEventListener('click', function(){ //add event listener to every button
             let currentBtn = document.querySelector('.active-btn');  //get the current button
@@ -12,27 +12,22 @@ function PageTransitions(){
             this.className += ' active-btn'; //activate the button that was clicked
         })
     }
-    /*
-    //Sections active class
-    allSections.addEventListener('click', (e) => {
-        const id = e.target.dataset.id;
-        if (id){ //if id exists
-            //remove active from the other button
-            sectBtn.forEach((btn) => {
-                btn.classList.remove('active');
-            })
-            e.target.classList.add('active');
-            
+    
+    // to transition between sections
+    body.addEventListener('click', (event) => {
+        const id = event.target.dataset.id;
+        // if 'id' exists
+        if (id){       
             //hide other sections
             sections.forEach((section) => {
-                section.classList.remove('active');
+                section.classList.remove('active-section');
             })
-
+            // display active section
             const element = document.getElementById(id);
-            element.classList.add('active');
+            element.classList.add('active-section');
         }
     })
-
+    /*
     //Toggle Theme
     const themeBtn = document.querySelector('.theme-btn');
     themeBtn.addEventListener('click', ()=>{
