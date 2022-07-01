@@ -26,7 +26,8 @@ body {
     font-family: 'Manrope', sans-serif;
     font-size: 1.1rem;
     color: var(--color-white);
-    transition: all .4s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
+    opacity: 0; // onload changes this value to 1 in javascript
 }
 
 .menu {
@@ -34,7 +35,6 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    padding-top: 1rem;
     background-color: var(--color-primary);
     width: 100%;
     .nav-bar {
@@ -44,11 +44,13 @@ body {
         .nav-btn-envelope { 
             padding: 0 2rem;   
             .nav-btn {
+                cursor: pointer;
                 a {
                     text-decoration: none;
                     text-transform: uppercase;
                     color: var(--color-grey-1);
                     white-space: nowrap;
+                    pointer-events: none;
                 }
                 a:hover {
                     color: var(--color-secondary);
@@ -61,16 +63,57 @@ body {
     }
 }
 
-.image {
-    display: flex;
-    justify-content: center;
-
-    img {
-        width: auto;
-        height: 500px;
-    }
+section{
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    //padding: 3rem 18rem;
+    //transform: translateY(-100%) scale(0);
+    //transition: all .4s ease-in-out;
+    background-color: var(--color-primary);
 }
 
-.random {
-    position: fixed;
+// missing header selector from website-attempt-1, do we need it?
+
+.section-1 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: red;
+}
+
+.section-2 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-image: blue;
+}
+
+.section-3 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: green;
+}
+
+.active-section {
+    display: block;
+    /*
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    */
+}
+.image {
+    img{
+        width: 300px;
+        height: auto;
+    }
 }

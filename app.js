@@ -15,11 +15,18 @@ function PageTransitions(){
     
     // to transition between sections
     body.addEventListener('click', (event) => {
+        // we specified the target with 'cursor: pointer;' 
+        // and made sure it doesn't go to the anchor tag 
+        // with 'pointer-events: none;'
         const id = event.target.dataset.id;
         // if 'id' exists
+        console.log(id);
         if (id){       
             //hide other sections
+            console.log(event.target);
+            console.log(sections);
             sections.forEach((section) => {
+                
                 section.classList.remove('active-section');
             })
             // display active section
@@ -35,6 +42,10 @@ function PageTransitions(){
         element.classList.toggle('light-mode');
     })
     */
+
+    body.onload = function(){
+        document.body.style.opacity='1';
+    }
 }
 
 PageTransitions();

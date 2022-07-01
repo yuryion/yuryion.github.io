@@ -26,8 +26,9 @@ body {
   font-family: 'Manrope', sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: opacity 1.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
+  opacity: 0;
 }
 
 .menu {
@@ -36,7 +37,6 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 10;
-  padding-top: 1rem;
   background-color: var(--color-primary);
   width: 100%;
 }
@@ -58,11 +58,16 @@ body {
   padding: 0 2rem;
 }
 
+.menu .nav-bar .nav-btn-envelope .nav-btn {
+  cursor: pointer;
+}
+
 .menu .nav-bar .nav-btn-envelope .nav-btn a {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-grey-1);
   white-space: nowrap;
+  pointer-events: none;
 }
 
 .menu .nav-bar .nav-btn-envelope .nav-btn a:hover {
@@ -73,21 +78,55 @@ body {
   color: var(--color-secondary) !important;
 }
 
-.image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--color-primary);
+}
+
+.section-1 {
+  display: none;
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  background-color: red;
+}
+
+.section-2 {
+  display: none;
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  background-image: blue;
+}
+
+.section-3 {
+  display: none;
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  background-color: green;
+}
+
+.active-section {
+  display: block;
+  /*
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    */
 }
 
 .image img {
-  width: auto;
-  height: 500px;
-}
-
-.random {
-  position: fixed;
+  width: 300px;
+  height: auto;
 }
 /*# sourceMappingURL=styles.css.map */
