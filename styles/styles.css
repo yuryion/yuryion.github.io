@@ -28,13 +28,15 @@ body {
   -webkit-transition: opacity 1.5s ease-in-out;
   transition: opacity 1.5s ease-in-out;
   opacity: 0;
+  height: 100vh;
 }
 
-.top-spacer {
-  padding: 1rem o;
-  color: var(--color-primary);
+/*
+.top-spacer {  //this is so the nav bar doesnt cover the page but instead sits on top
+    padding: 1rem 0;
+    color: var(--color-primary)
 }
-
+*/
 .menu {
   position: fixed;
   left: 50%;
@@ -87,8 +89,6 @@ body {
 }
 
 section {
-  min-height: 100vh;
-  width: 100%;
   background-color: var(--color-primary);
   display: none;
 }
@@ -118,24 +118,11 @@ section {
 }
 
 /* Home */
-.home-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.home-content .left-home {
+.home {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -144,66 +131,55 @@ section {
           align-items: center;
 }
 
-.home-content .left-home .name {
+.home .home-content {
+  /*
+        .h-shape{
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            position: absolute;
+            left: 0;
+            top: 0;
+            //z-index: -1; //makes it behind
+            clip-path: polygon(10% 0, 12% 0, 2% 100%, 0% 100%); //you can get this from a generator online
+        }
+        .right-home{
+            display: flex;
+            align-items: center;
+            position: relative;
+            
+            .image-frame{
+                border: 1rem solid var(--color-secondary);
+                border-radius: 50%;
+                width: 40%;
+                height: 40%;
+                display:flex;
+                justify-content: center;
+                img{
+                    height: auto;
+                    width: 100%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    transition: all .4s ease-in-out;
+                    filter: grayscale(100%);
+                    &:hover{
+                        filter: grayscale(0%);
+                    }
+                }
+            }
+        }
+        */
+}
+
+.home .home-content .hook {
   font-size: 3rem;
 }
 
-.home-content .left-home .name span {
+.home .home-content .hook .greeting .name {
   color: var(--color-secondary);
 }
 
-.home-content .left-home p {
-  line-height: 2rem;
-}
-
-.home-content .h-shape {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-secondary);
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-clip-path: polygon(10% 0, 12% 0, 2% 100%, 0% 100%);
-          clip-path: polygon(10% 0, 12% 0, 2% 100%, 0% 100%);
-}
-
-.home-content .right-home {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-.home-content .right-home .image-frame {
-  border: 1rem solid var(--color-secondary);
-  border-radius: 50%;
-  width: 40%;
-  height: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home-content .right-home .image-frame img {
-  height: auto;
-  width: 100%;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-}
-
-.home-content .right-home .image-frame img:hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+.home .home-content .hook .ion {
+  font-size: 16rem;
 }
 /*# sourceMappingURL=styles.css.map */

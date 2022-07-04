@@ -28,12 +28,15 @@ body {
     color: var(--color-white);
     transition: opacity 1.5s ease-in-out;
     opacity: 0; // onload changes this value to 1 in javascript
+    height: 100vh;
 }
 
+/*
 .top-spacer {  //this is so the nav bar doesnt cover the page but instead sits on top
-    padding: 1rem o;
+    padding: 1rem 0;
     color: var(--color-primary)
 }
+*/
 
 .menu {
     position: fixed;
@@ -74,24 +77,8 @@ body {
 }
 
 section{
-    min-height: 100vh;
-    width: 100%;
     background-color: var(--color-primary);
     display: none;
-}
-
-// missing header selector from website-attempt-1, do we need it?
-
-.section-1 {
-    //background-color: red;
-}
-
-.section-2 {
-    //background-color: blue;
-}
-
-.section-3 {
-    //background-color: green;
 }
 
 .active-section {
@@ -110,65 +97,66 @@ section{
 }
 
 /* Home */
-.home-content{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    min-height: 100vh;
-    position:relative;
-    overflow-x: hidden;
-    //padding: 0 10rem;
-    
-    .left-home{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        //padding: 1rem 2rem;
-        .name{
-            font-size: 3rem;
-            span{
-                color: var(--color-secondary)
-            }
-        }
-        p{
-            line-height: 2rem;
-        }
-    }
-    .h-shape{
-        width: 100%;
-        height: 100%;
-        background-color: var(--color-secondary);
-        position: absolute;
-        left: 0;
-        top: 0;
-        //z-index: -1; //makes it behind
-        clip-path: polygon(10% 0, 12% 0, 2% 100%, 0% 100%); //you can get this from a generator online
-    }
-    .right-home{
-        display: flex;
-        align-items: center;
-        position: relative;
+.home{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home-content{
         
-        .image-frame{
-            border: 1rem solid var(--color-secondary);
-            border-radius: 50%;
-            width: 40%;
-            height: 40%;
-            display:flex;
-            justify-content: center;
-            img{
-                height: auto;
-                width: 100%;
-                border-radius: 50%;
-                object-fit: cover;
-                transition: all .4s ease-in-out;
-                filter: grayscale(100%);
-                &:hover{
-                    filter: grayscale(0%);
+        .hook{
+            font-size: 3rem;
+            .greeting{
+                .name{
+                    color: var(--color-secondary)
+                }
+            }
+            .ion{
+                font-size: 16rem;
+                .o{
+    
                 }
             }
         }
+        /*
+        .h-shape{
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            position: absolute;
+            left: 0;
+            top: 0;
+            //z-index: -1; //makes it behind
+            clip-path: polygon(10% 0, 12% 0, 2% 100%, 0% 100%); //you can get this from a generator online
+        }
+        .right-home{
+            display: flex;
+            align-items: center;
+            position: relative;
+            
+            .image-frame{
+                border: 1rem solid var(--color-secondary);
+                border-radius: 50%;
+                width: 40%;
+                height: 40%;
+                display:flex;
+                justify-content: center;
+                img{
+                    height: auto;
+                    width: 100%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    transition: all .4s ease-in-out;
+                    filter: grayscale(100%);
+                    &:hover{
+                        filter: grayscale(0%);
+                    }
+                }
+            }
+        }
+        */
     }
 }
+
 
 
