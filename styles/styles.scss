@@ -76,14 +76,15 @@ body {
     }
 }
 
-section{
-    background-color: var(--color-primary);
+.section{
+    //background-color: var(--color-primary);
+    transform: translateY(-100%) scale(0);
     display: none;
+    
 }
-
 .active-section {
     display: block;
-
+    transform: translateY(0) scale(1);
     animation: fadein 1s ease-in-out;
     @keyframes fadein{
         0%{
@@ -94,28 +95,32 @@ section{
             opacity: 1;
         }
     }
+    
 }
 
 /* Home */
 .home {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     .home-content {
-        display: flex;
-        align-items: baseline;
-        justify-content: baseline;
         .hook {
             font-size: 3rem;
             font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            //align-items: baseline;
+            
             .greeting {
                 .name {
                     color: var(--color-secondary)
                 }
             }
             .ion {
-                display: inline;
                 font-size: 16rem;
                 .o {
                     .image-frame {
@@ -123,7 +128,6 @@ section{
                         img {
                             height: 12rem;
                             width: auto;
-                            font-weight: 600;
                             border: .5rem solid var(--color-secondary);
                             border-radius: 50%;
                         }

@@ -88,13 +88,16 @@ body {
   color: var(--color-secondary) !important;
 }
 
-section {
-  background-color: var(--color-primary);
+.section {
+  -webkit-transform: translateY(-100%) scale(0);
+          transform: translateY(-100%) scale(0);
   display: none;
 }
 
 .active-section {
   display: block;
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
   -webkit-animation: fadein 1s ease-in-out;
           animation: fadein 1s ease-in-out;
 }
@@ -120,6 +123,7 @@ section {
 /* Home */
 .home {
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,15 +136,6 @@ section {
 }
 
 .home .home-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
   /*
         .h-shape{
             width: 100%;
@@ -183,6 +178,19 @@ section {
 .home .home-content .hook {
   font-size: 3rem;
   font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home .home-content .hook .greeting .name {
@@ -190,14 +198,12 @@ section {
 }
 
 .home .home-content .hook .ion {
-  display: inline;
   font-size: 16rem;
 }
 
 .home .home-content .hook .ion .o .image-frame img {
   height: 12rem;
   width: auto;
-  font-weight: 600;
   border: 0.5rem solid var(--color-secondary);
   border-radius: 50%;
 }
