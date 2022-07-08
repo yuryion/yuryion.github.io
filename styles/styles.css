@@ -197,11 +197,11 @@ body {
   color: var(--color-secondary);
 }
 
-.home .home-content .hook .ion {
+.home .home-content .hook .last-name {
   font-size: 16rem;
 }
 
-.home .home-content .hook .ion .o .image-frame img {
+.home .home-content .hook .last-name .O .image-frame img {
   height: 12rem;
   width: auto;
   border: 0.5rem solid var(--color-secondary);
