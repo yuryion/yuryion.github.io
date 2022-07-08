@@ -132,6 +132,15 @@ section {
 }
 
 .home .home-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
   /*
         .h-shape{
             width: 100%;
@@ -173,6 +182,7 @@ section {
 
 .home .home-content .hook {
   font-size: 3rem;
+  font-weight: 600;
 }
 
 .home .home-content .hook .greeting .name {
@@ -180,6 +190,15 @@ section {
 }
 
 .home .home-content .hook .ion {
+  display: inline;
   font-size: 16rem;
+}
+
+.home .home-content .hook .ion .o .image-frame img {
+  height: 12rem;
+  width: auto;
+  font-weight: 600;
+  border: 0.5rem solid var(--color-secondary);
+  border-radius: 50%;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -97,24 +97,37 @@ section{
 }
 
 /* Home */
-.home{
+.home {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    .home-content{
-        
-        .hook{
+    .home-content {
+        display: flex;
+        align-items: baseline;
+        justify-content: baseline;
+        .hook {
             font-size: 3rem;
-            .greeting{
-                .name{
+            font-weight: 600;
+            .greeting {
+                .name {
                     color: var(--color-secondary)
                 }
             }
-            .ion{
+            .ion {
+                display: inline;
                 font-size: 16rem;
-                .o{
-    
+                .o {
+                    .image-frame {
+                        
+                        img {
+                            height: 12rem;
+                            width: auto;
+                            font-weight: 600;
+                            border: .5rem solid var(--color-secondary);
+                            border-radius: 50%;
+                        }
+                    }
                 }
             }
         }
