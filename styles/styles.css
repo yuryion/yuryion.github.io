@@ -9,6 +9,7 @@
 :root {
   --color-primary: #070707;
   --color-secondary: #C1EEFF;
+  --color-tertiary: #FFFFB3;
   --color-white: #FFFFFF;
   --color-black: #000000;
   --color-grey-0: #f8f8f8;
@@ -36,11 +37,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.nav-spacer {
-  padding: 1rem 0;
-  color: var(--color-primary);
 }
 
 .menu {
@@ -84,7 +80,7 @@ body {
 }
 
 .menu .nav-bar .nav-btn-envelope .active-btn {
-  color: var(--color-secondary) !important;
+  color: var(--color-secondary);
 }
 
 .section {
@@ -95,9 +91,6 @@ body {
 }
 
 .active-section {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: block;
   position: static;
   -webkit-transform: translateY(0) scale(1);
@@ -126,6 +119,9 @@ body {
 
 /* Home */
 .home {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,41 +166,8 @@ body {
   border-radius: 50%;
 }
 
-/*main title*/
-/*
-.main-title{
-    text-align: center;
-    h2{
-        position: relative;
-        text-transform: uppercase;
-        font-size: 4rem;
-        font-weight: 700;
-        span{
-            color: var(--color-secondary);
-        }
-        .bg-text{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            color: var(--color-grey-5);
-            transition: all .4s ease-in-out;
-            z-index: -1;
-            transform: translate(-50%, -50%); //centering
-            font-weight: 800;
-            font-size: 6.3rem;
-
-        }
-    }
-}
-*/
 /* About */
 .about {
-  width: 100%;
-  height: 100%;
-  /*Timeline*/
-}
-
-.about .about-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,85 +177,70 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*
-        .right-about{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 2rem;
-            .about-item{
-                border: 1px solid var(--color-grey-5);
-                border-radius: 5x;
-                transition: all .4s ease-in-out;
-                box-shadow: 1px 2px 15px rgba(0,0,0,.1);
-                &:hover{
-                    cursor: default;
-                    transform: translateY(-5px);
-                    border: 1px solid var(--color-secondary);
-                    box-shadow: 1px 4px 15px rgba(0,0,0,.32);
-                }
-                .abt-text{
-                    padding: 1.5rem;
-                    display: flex;
-                    flex-direction: column;
-                    .large-text{
-                        font-size: 3rem;
-                        font-weight: 700;
-                        color: var(--color-secondary);
-                    }
-                    .small-text{
-                        padding-left: 3rem;
-                        position: relative;
-                        text-transform: uppercase;
-                        font-size: 1.2rem;
-                        color: var(--color-grey-1);
-                        letter-spacing: 2px;
-                        &::before{
-                            content: '';
-                            position: absolute;
-                            left: 0;
-                            top: 15px;
-                            width: 2rem;
-                            height: 2px;
-                            background-color: var(--color-grey-5);
-    
-                        }
-                    }
-                }
-            }
-        }
-    
-        .left-about{
-            padding-right: 5rem;
-            p{
-                line-height: 2rem;
-                padding: 1rem;
-                color: var(--color-grey-1);
-            }
-            h4{
-                font-size: 2rem;
-                text-transform: uppercase;
-            }
-        }
-        */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.about .about-content .about-me .about-me-paragraph .last-name-letter {
-  font-size: 3rem;
+.about .about-content .about-me {
+  height: calc(100vh - 5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.about .about-stats {
-  padding-bottom: 4rem;
+.about .about-content .about-me .paragraph {
+  text-align: justify;
+  text-align-last: center;
+  width: 50%;
+  font-size: 1.75rem;
+  padding: 2rem;
+  border: 1px solid var(--color-grey-5);
+  border-radius: 5x;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-.about .about-stats .progress-bars {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+.about .about-content .about-me .paragraph .quote {
+  color: var(--color-secondary);
 }
 
-.about .about-stats .progress-bars .progress-bar {
+.about .about-content .about-me .paragraph:hover {
+  cursor: default;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+}
+
+.about .about-content .about-stats {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .about-content .about-stats .progress-bars {
+  width: 50%;
+}
+
+.about .about-content .about-stats .progress-bars .progress-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,35 +248,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 1rem;
 }
 
-.about .about-stats .progress-bars .progress-bar .prog-title {
+.about .about-content .about-stats .progress-bars .progress-bar .progress-name {
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.about .about-stats .progress-bars .progress-bar .progress-con {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.about .about-stats .progress-bars .progress-bar .progress-con .prog-text {
-  color: var(--color-grey-2);
-}
-
-.about .about-stats .progress-bars .progress-bar .progress-con .progress {
+.about .about-content .about-stats .progress-bars .progress-bar .progress {
   width: 100%;
   height: .45rem;
-  background-color: var(--color-grey-4);
-  margin-left: 1rem;
+  background-color: var(--color-grey-1);
   position: relative;
 }
 
-.about .about-stats .progress-bars .progress-bar .progress-con .progress span {
+.about .about-content .about-stats .progress-bars .progress-bar .progress span {
   position: absolute;
   top: 0;
   left: 0;
@@ -336,54 +271,34 @@ body {
   background-color: var(--color-secondary);
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  width: 60%;
 }
 
-.about .about-stats .progress-bars .progress-bar .progress-con .progress .html {
+.about .about-content .about-stats .progress-bars .progress-bar .progress .html {
   width: 90%;
 }
 
-.about .about-stats .progress-bars .progress-bar .progress-con .progress .css {
+.about .about-content .about-stats .progress-bars .progress-bar .progress .css {
   width: 50%;
 }
 
-.about .about-stats .progress-bars .progress-bar .progress-con .progress .javascript {
+.about .about-content .about-stats .progress-bars .progress-bar .progress .javascript {
   width: 50%;
 }
 
-.about .about-stats .progress-bars .progress-bar .progress-con .progress .reactjs {
+.about .about-content .about-stats .progress-bars .progress-bar .progress .reactjs {
   width: 50%;
 }
 
-.about .about-stats .progress-bars .progress-bar .progress-con .progress .nodejs {
+.about .about-content .about-stats .progress-bars .progress-bar .progress .nodejs {
   width: 50%;
 }
 
-.about .about-stats .progress-bars .progress-bar .progress-con .progress .python {
+.about .about-content .about-stats .progress-bars .progress-bar .progress .python {
   width: 50%;
 }
 
-.about .stat-title {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  text-align: center;
-  padding: 3.5rem 0;
-  position: relative;
-}
-
-.about .stat-title::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 40%;
-  height: 1px;
-  background-color: var(--color-grey-5);
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.about .timeline {
+.about .about-content .timeline {
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -392,13 +307,13 @@ body {
   padding-bottom: 3rem;
 }
 
-.about .timeline .timeline-item {
+.about .about-content .timeline .timeline-item {
   position: relative;
   padding-left: 3rem;
   border-left: 1px solid var(--color-grey-5);
 }
 
-.about .timeline .timeline-item .tl-icon {
+.about .about-content .timeline .timeline-item .tl-icon {
   position: absolute;
   left: -3rem;
   top: 0;
@@ -417,11 +332,11 @@ body {
           justify-content: center;
 }
 
-.about .timeline .timeline-item .tl-icon i {
+.about .about-content .timeline .timeline-item .tl-icon i {
   font-size: 1.3rem;
 }
 
-.about .timeline .timeline-item .tl-duration {
+.about .about-content .timeline .timeline-item .tl-duration {
   padding: .2rem .6rem;
   background-color: var(--color-grey-5);
   border-radius: 15px;
@@ -431,20 +346,20 @@ body {
   font-weight: 500;
 }
 
-.about .timeline .timeline-item h5 {
+.about .about-content .timeline .timeline-item h5 {
   padding: 1rem 0;
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
 }
 
-.about .timeline .timeline-item h5 span {
+.about .about-content .timeline .timeline-item h5 span {
   color: var(--color-grey-2);
   font-weight: 500;
   font-size: 1.2rem;
 }
 
-.about .timeline .timeline-item p {
+.about .about-content .timeline .timeline-item p {
   color: var(--color-grey-2);
 }
 /*# sourceMappingURL=styles.css.map */
