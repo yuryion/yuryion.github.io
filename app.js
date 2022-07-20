@@ -34,14 +34,12 @@ function PageTransitions(){
             element.classList.add('active-section');
         }
     })
-    /*
     //Toggle Theme
-    const themeBtn = document.querySelector('.theme-btn');
+    const themeBtn = document.querySelector('.nav-btn-theme');
     themeBtn.addEventListener('click', ()=>{
         let element = document.body;
         element.classList.toggle('light-mode');
     })
-    */
 
     body.onload = function(){
         document.body.style.opacity='1';
