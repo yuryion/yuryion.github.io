@@ -209,6 +209,9 @@ body {
 .about .about-content .about-stats .progress-bars .progress-bar .progress-tube .javascript {
   width: 65%;
 }
+.about .about-content .about-stats .progress-bars .progress-bar .progress-tube .mysql {
+  width: 70%;
+}
 .about .about-content .about-timeline {
   margin: 3rem 3rem 9rem 3rem;
   width: 60%;
@@ -304,6 +307,7 @@ body {
   font-size: 1.5rem;
   color: var(--color-primary);
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 .portfolio .projects .project .hover-items .icons {
   display: flex;
