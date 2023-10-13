@@ -90,16 +90,7 @@ body {
   display: block;
   position: static;
   transform: translateY(0) scale(1);
-  -webkit-animation: fadein 1s ease-in-out;
-          animation: fadein 1s ease-in-out;
-}
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: fadein 1s ease-in-out;
 }
 @keyframes fadein {
   0% {
